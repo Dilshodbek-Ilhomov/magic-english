@@ -9,3 +9,5 @@ gunicorn
 psycopg2-binary
 django-storages[s3]
 boto3
+moviepy
+Pillow
