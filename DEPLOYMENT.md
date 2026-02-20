@@ -7,7 +7,7 @@ Ushbu yo'riqnoma orqali siz saytingizning frontend va backend qismlarini bir tiy
 2. **Neon.tech** — PostgreSQL ma'lumotlar bazasi uchun.
 3. **Render.com** — Django (Backend) ni ishga tushirish uchun.
 4. **Vercel.com** — Next.js (Frontend) ni ishga tushirish uchun.
-5. **Cloudinary.com** — Rasmlar va Videolarni saqlash uchun.
+5. **Supabase** — Ma'lumotlar bazasi yoki Media (Video/Rasm) saqlash uchun.
 
 ---
 
@@ -26,14 +26,16 @@ Barcha kodlaringizni GitHub-ga yuklang. Sizda 2 xil yo'l bor:
 
 ---
 
-## 3-Qadam: Media saqlash (Cloudinary)
-Django serverlari (Render/Koyeb) videolarni saqlash imkonini bermaydi (o'chib ketadi). Shuning uchun:
-1. [cloudinary.com](https://cloudinary.com/)-dan ro'yxatdan o'ting.
-2. `Dashboard`-dan quyidagilarni oling:
-    *   `Cloud Name`
-    *   `API Key`
-    *   `API Secret`
-3. Django `settings.py` faylida `cloudinary` ni sozlang (agar sozlanmagan bo'lsa, men yordam beraman).
+## 3-Qadam: Media saqlash (Supabase Storage)
+Django serverlari (Render) videolarni saqlash imkonini bermaydi. Cloudinary O'zbekistonda muammo qilishi mumkinligi sababli Supabase Storage-dan foydalanamiz:
+1. [Supabase.com](https://supabase.com/)-ga kiring va loyiha yarating.
+2. `Storage` bo'limiga o'ting va yangi `media` nomli bucket yarating (Public qilib belgilang).
+3. `Project Settings` -> `Storage` bo'limidan `S3 Settings`-ni yoqing.
+4. Quyidagi ma'lumotlarni oling:
+    *   `Endpoint` (S3 URL)
+    *   `Access Key ID`
+    *   `Secret Access Key`
+    *   `Region` (odatda `us-east-1`)
 
 ---
 
@@ -49,7 +51,10 @@ Django serverlari (Render/Koyeb) videolarni saqlash imkonini bermaydi (o'chib ke
     *   `SECRET_KEY`: (O'zingizning maxfiy kalitingiz)
     *   `DEBUG`: `False`
     *   `ALLOWED_HOSTS`: `your-backend-url.onrender.com`
-    *   `CLOUDINARY_URL`: (Cloudinary-dan olingan API havola)
+    *   `AWS_ACCESS_KEY_ID`: (Supabase S3 Access Key)
+    *   `AWS_SECRET_ACCESS_KEY`: (Supabase S3 Secret Key)
+    *   `AWS_STORAGE_BUCKET_NAME`: `media`
+    *   `AWS_S3_ENDPOINT_URL`: (Supabase S3 Endpoint URL)
 
 ---
 

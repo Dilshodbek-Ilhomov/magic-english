@@ -7,5 +7,5 @@ python-dotenv
 whitenoise
 gunicorn
 psycopg2-binary
-django-cloudinary-storage
-cloudinary
+django-storages[s3]
+boto3
