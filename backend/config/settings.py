@@ -228,19 +228,14 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose',
         },
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'logs' / 'app.log',
-            'formatter': 'verbose',
-        },
     },
     'root': {
-        'handlers': ['console', 'file'],
+        'handlers': ['console'],
         'level': 'INFO',
     },
     'loggers': {
-        'accounts': {'handlers': ['console', 'file'], 'level': 'INFO'},
-        'courses': {'handlers': ['console', 'file'], 'level': 'INFO'},
-        'analytics': {'handlers': ['console', 'file'], 'level': 'INFO'},
+        'accounts': {'handlers': ['console'], 'level': 'INFO', 'propagate': False},
+        'courses': {'handlers': ['console'], 'level': 'INFO', 'propagate': False},
+        'analytics': {'handlers': ['console'], 'level': 'INFO', 'propagate': False},
     },
 }
