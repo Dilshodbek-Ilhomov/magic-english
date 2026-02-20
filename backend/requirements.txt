@@ -1,0 +1,11 @@
+django>=4.2
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+django-filter
+python-dotenv
+whitenoise
+gunicorn
+psycopg2-binary
+django-cloudinary-storage
+cloudinary

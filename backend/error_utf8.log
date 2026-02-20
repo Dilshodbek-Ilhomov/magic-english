@@ -1,0 +1,241 @@
+﻿python : Traceback (mo
+st recent call last):
+строка:1 знак:1
++ python manage.py che
+ck 2> error.log
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (Traceback    
+ (most recent call    
+ last)::String) [    ]
+, RemoteExceptio    n
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+  File "C:\Users\Dilsh
+odbek\Desktop\New site
+\backend\manage.py", l
+ine 22, in <module>
+    main()
+  File "C:\Users\Dilsh
+odbek\Desktop\New site
+\backend\manage.py", l
+ine 18, in main
+    execute_from_comma
+nd_line(sys.argv)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\m
+anagement\__init__.py"
+, line 442, in execute
+_from_command_line
+    utility.execute()
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\m
+anagement\__init__.py"
+, line 436, in execute
+    self.fetch_command
+(subcommand).run_from_
+argv(self.argv)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\m
+anagement\base.py", li
+ne 416, in run_from_ar
+gv
+    self.execute(*args
+, **cmd_options)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\m
+anagement\base.py", li
+ne 460, in execute
+    output = self.hand
+le(*args, **options)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\m
+anagement\commands\che
+ck.py", line 81, in ha
+ndle
+    self.check(
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\m
+anagement\base.py", li
+ne 492, in check
+    all_issues = check
+s.run_checks(
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\c
+hecks\registry.py", li
+ne 89, in run_checks
+    new_errors = check
+(app_configs=app_confi
+gs, databases=database
+s)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\c
+hecks\urls.py", line 1
+6, in check_url_config
+    return check_resol
+ver(resolver)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\core\c
+hecks\urls.py", line 2
+6, in check_resolver
+    return check_metho
+d()
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\urls\r
+esolvers.py", line 531
+, in check
+    for pattern in sel
+f.url_patterns:
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\utils\
+functional.py", line 4
+7, in __get__
+    res = instance.__d
+ict__[self.name] = sel
+f.func(instance)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\urls\r
+esolvers.py", line 718
+, in url_patterns
+    patterns = getattr
+(self.urlconf_module, 
+"urlpatterns", self.ur
+lconf_module)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\utils\
+functional.py", line 4
+7, in __get__
+    res = instance.__d
+ict__[self.name] = sel
+f.func(instance)
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\urls\r
+esolvers.py", line 711
+, in urlconf_module
+    return import_modu
+le(self.urlconf_name)
+  File "C:\Program Fil
+es\Python310\lib\impor
+tlib\__init__.py", lin
+e 126, in import_modul
+e
+    return _bootstrap.
+_gcd_import(name[level
+:], package, level)
+  File "<frozen import
+lib._bootstrap>", line
+ 1050, in _gcd_import
+  File "<frozen import
+lib._bootstrap>", line
+ 1027, in _find_and_lo
+ad
+  File "<frozen import
+lib._bootstrap>", line
+ 1006, in _find_and_lo
+ad_unlocked
+  File "<frozen import
+lib._bootstrap>", line
+ 688, in _load_unlocke
+d
+  File "<frozen import
+lib._bootstrap_externa
+l>", line 883, in exec
+_module
+  File "<frozen import
+lib._bootstrap>", line
+ 241, in _call_with_fr
+ames_removed
+  File "C:\Users\Dilsh
+odbek\Desktop\New site
+\backend\config\urls.p
+y", line 36, in <modul
+e>
+    path('api/', inclu
+de('courses.urls')),
+  File "C:\Users\Dilsh
+odbek\AppData\Roaming\
+Python\Python310\site-
+packages\django\urls\c
+onf.py", line 39, in i
+nclude
+    urlconf_module = i
+mport_module(urlconf_m
+odule)
+  File "C:\Program Fil
+es\Python310\lib\impor
+tlib\__init__.py", lin
+e 126, in import_modul
+e
+    return _bootstrap.
+_gcd_import(name[level
+:], package, level)
+  File "<frozen import
+lib._bootstrap>", line
+ 1050, in _gcd_import
+  File "<frozen import
+lib._bootstrap>", line
+ 1027, in _find_and_lo
+ad
+  File "<frozen import
+lib._bootstrap>", line
+ 1006, in _find_and_lo
+ad_unlocked
+  File "<frozen import
+lib._bootstrap>", line
+ 688, in _load_unlocke
+d
+  File "<frozen import
+lib._bootstrap_externa
+l>", line 883, in exec
+_module
+  File "<frozen import
+lib._bootstrap>", line
+ 241, in _call_with_fr
+ames_removed
+  File "C:\Users\Dilsh
+odbek\Desktop\New site
+\backend\courses\urls.
+py", line 27, in <modu
+le>
+    path('admin/course
+s/', AdminCourseListCr
+eateView.as_view(), na
+me='admin-course-list'
+),
+NameError: name 'Admin
+CourseListCreateView' 
+is not defined. Did yo
+u mean: 'AdminVideoLis
+tCreateView'?
