@@ -27,22 +27,9 @@ const nextConfig = {
     ],
   },
 
-  // API va media so'rovlarni Django backendga proxy qilish
+  // API va media so'rovlarni Django backendga proxy qilish (faqat development uchun kerak bo'lishi mumkin)
   async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'http://127.0.0.1:8000/api/:path*',
-      },
-      {
-        source: '/media/:path*',
-        destination: 'http://127.0.0.1:8000/media/:path*',
-      },
-      {
-        source: '/django-admin/:path*',
-        destination: 'http://127.0.0.1:8000/django-admin/:path*',
-      },
-    ];
+    return [];
   },
 
   // Xavfsizlik headerlari
