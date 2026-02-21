@@ -19,7 +19,14 @@ def get_random_secret_key():
 
 SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
+
+# Render.com domenini avtomatik qo'shish
+RENDER_EXTERNAL_URL = os.getenv('RENDER_EXTERNAL_URL')
+if RENDER_EXTERNAL_URL:
+    render_host = RENDER_EXTERNAL_URL.replace('https://', '').replace('http://', '').strip('/')
+    if render_host not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append(render_host)
 
 # O'rnatilgan ilovalar
 INSTALLED_APPS = [
@@ -186,8 +193,17 @@ SIMPLE_JWT = {
 
 # CORS sozlamalari
 CORS_ALLOWED_ORIGINS = [
-    os.getenv('FRONTEND_URL', 'http://localhost:3000'),
+    os.getenv('FRONTEND_URL', 'http://localhost:3000').strip('/'),
 ]
+
+# Vercel domenlarini va qo'shimcha domenlarni avtomatik ruxsat berish
+CORS_ALLOW_ALL_ORIGINS = DEBUG # Developmentda hammasiga ruxsat
+if not DEBUG:
+    # Agar biron-bir vercel domeni bo'lsa, unga ruxsat berish yoki 
+    # FRONTEND_URL orqali boshqarish tavsiya etiladi
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r"^https://.*\.vercel\.app$",
+    ]
 CORS_ALLOW_CREDENTIALS = True
 
 # Xavfsizlik sozlamalari
